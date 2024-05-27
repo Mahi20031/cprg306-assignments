@@ -7,7 +7,7 @@ function StudentInfo() {
       <h1>
         Mahipinder Ahluwalia
       </h1>
-      <Link href="/">GitHub URL</Link>
+      <Link href="https://github.com/Mahi20031/cprg306-assignments">GitHub URL</Link>
     </div>
   )
 }
