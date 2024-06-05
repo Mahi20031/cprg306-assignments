@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Item = ({name, quantity, category}) => {
+const item = ({name, quantity, category}) => {
     return(
         <li>
             <span>{name}</span>
@@ -9,4 +9,4 @@ const Item = ({name, quantity, category}) => {
         </li>
     )
 }
-export default Item;
+export default item;
