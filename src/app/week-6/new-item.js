@@ -9,6 +9,8 @@ const NewItem = ({ onAddItem }) => {
     const [quantity, setQuantity] = useState('');
     const [category, setCategory] = useState('');
 
+    const categories = ['Produce', 'Dairy', 'Bakery', 'Meat', 'Frozen Foods', 'Canned Goods', 'Dry Goods', 'Beverages', 'Snacks', 'Household', 'Other'];
+
     const handleSubmit = (e) => {
         e.preventDefault();
         const newItem = {
@@ -37,12 +39,17 @@ const NewItem = ({ onAddItem }) => {
                 value={quantity}
                 onChange={(e) => setQuantity(e.target.value)}
             />
-            <input
-                type="text"
-                placeholder="Category"
+            <select
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
-            />
+            >
+                <option value="">Select Category</option>
+                {categories.map((cat, index) => (
+                    <option key={index} value={cat}>
+                        {cat}
+                    </option>
+                ))}
+                </select>
             <button type="submit">Add Item</button>
         </form>
     );

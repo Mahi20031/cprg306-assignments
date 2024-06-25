@@ -7,11 +7,9 @@ import itemsData from './items.json';
 
 const Page = () => {
     const [items, setItems] = useState(itemsData);
-handleAddItem = (item) => {
+    const handleAddItem = (item) => {
         setItems([...items, item]);
-    };
-
-
+    };   
     return (
         <div>
             <NewItem onAddItem={handleAddItem} />
